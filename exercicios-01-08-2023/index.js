@@ -23,13 +23,23 @@ e sobrescrevam o método "falar" para exibir o som característico de cada anima
     Em seguida, crie um objeto chamado "pessoa1" e atribua a ele um nome e uma idade.
 */
 class Person{
+    //Atributo age colocado como privado com a utilização do #
+    #age
     constructor(name, age){
         this.name = name;
-        this.age = age;
+        this.#age = age;
+    }
+    //Método get implementado para acesso ao atributo privado "age"
+    get age(){
+        return this.#age;
+    }
+    //Método set implementado para acesso ao atributo privado "age"
+    set age(age){
+        this.#age = age;
     }
 
     toPresent(){
-        console.log(`Pessoa1-> Nome: ${this.name} Idade: ${this.age} anos`);
+        console.log(`Pessoa1-> Nome: ${this.name} Idade: ${this.#age} anos`);
     }
 }
 
@@ -62,4 +72,15 @@ class Student extends Person{
 
 const student1 = new Student("Elthon", 29, 12345);
 
+/*
+    *EXERCÍCIO 4*
+    * Modifique a classe "Pessoa" para que o atributo "idade" seja privado.
+    Crie métodos getters e setters para acessar e alterar o valor da idade, respeitando o encapsulamento.
+*/
+
+//Aqui, após o encapsulamento do atributo "age" na classe Person, ao ser executado, a idade ficaria como undefined.
+//Porém, como implementamos dentro da Classe person o método get, o atributo é mostrado normalmente.
+student1.toPresent();
+student1.age = 30;
+//Na Linha abaixo, sem a implemntação do método set na classe Person, Elthon permaneceria com 29 anos.
 student1.toPresent();
