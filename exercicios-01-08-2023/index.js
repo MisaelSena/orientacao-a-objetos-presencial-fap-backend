@@ -29,7 +29,7 @@ class Person{
     }
 
     toPresent(){
-        console.log(`Nome: ${this.name} Idade: ${this.age} anos`);
+        console.log(`Pessoa1-> Nome: ${this.name} Idade: ${this.age} anos`);
     }
 }
 
@@ -41,3 +41,25 @@ const pessoa1 = new Person("Misael", 32);
     uma mensagem com o nome e a idade da pessoa.
 */
 pessoa1.toPresent();
+
+/*
+    *EXERCÍCIO 3*
+    * Crie uma classe chamada "Aluno" que herde da classe "Pessoa" (do exercício 1).
+    A classe "Aluno" deve ter um atributo adicional chamado "matricula".
+    Crie um objeto chamado "aluno1" que seja um aluno e imprima no console.
+*/
+
+class Student extends Person{
+    constructor(name, age, registration){
+        super(name, age);
+        this.registration = registration;
+    }
+
+    toPresent(){
+        console.log(`Aluno1-> Nome: ${this.name} - Idade: ${this.age} anos - Matrícula: ${this.registration}`);
+    }
+}
+
+const student1 = new Student("Elthon", 29, 12345);
+
+student1.toPresent();
