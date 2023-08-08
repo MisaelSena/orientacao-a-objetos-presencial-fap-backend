@@ -1,8 +1,8 @@
 {
-  "name": "softext-2023-poo",
+  "name": "softex-2023-poo",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Alcides Bezerra <alcides.bsilvaneto@gmail.com>",
+  "author": "Misael Sena <misaellsena@gmail.com>",
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
