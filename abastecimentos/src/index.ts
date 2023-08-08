@@ -37,7 +37,7 @@ class Carro{
     
 }
 
-class Passeio extends Carro{
+class Categoria extends Carro{
     capacidadePassageiros: number;
     peso: number;
 
@@ -49,7 +49,7 @@ class Passeio extends Carro{
 
 }
 
-const carro1 = new Passeio("Gol",55,13,10,5,1009);
+const carro1 = new Categoria("Gol",55,13,10,5,1009);
 
 console.log(`O ${carro1.nome} Possui ${carro1.autonomiaTanqueCheio()} Km de autonomia com Tanque Cheio!`);
 console.log(`Nível de Combustível Atual do ${carro1.nome}: ${carro1.getSituacaoTanque()} Litros Autonomia: ${carro1.getAutonomiaSituacaoTanque()} Km`);
